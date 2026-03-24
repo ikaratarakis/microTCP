@@ -62,17 +62,17 @@ make
 
 ```
 ┌──────────────────┬──────────────────┐
-│  Sequence Number  │    ACK Number    │
+│  Sequence Number │    ACK Number    │
 ├──────────────────┼──────────────────┤
-│   Control Bits    │   Window Size    │
+│   Control Bits   │   Window Size    │
 ├──────────────────┴──────────────────┤
-│            Data Length               │
+│            Data Length              │
 ├─────────────────────────────────────┤
-│            Timestamp                 │
+│            Timestamp                │
 ├──────────────────┬──────────────────┤
-│   Measure Delay   │    Reserved      │
+│   Measure Delay  │    Reserved      │
 ├──────────────────┴──────────────────┤
-│           CRC-32 Checksum            │
+│           CRC-32 Checksum           │
 └─────────────────────────────────────┘
 ```
 
