@@ -188,8 +188,7 @@ client (const char *serverip, uint16_t server_port)
 }
 
 void *client_thread(void *arg) {
-  long id;
-  id = (long) arg;
+  (void)arg;
   client(a.interface_addr, a.primary_port);
   return NULL;
 }
@@ -200,7 +199,6 @@ int
 server (uint16_t listen_port)
 {
   struct sockaddr_in sin;
-  int received = -1;
   microtcp_sock_t sock;
   microtcp_sock_t *sclient;
 
@@ -277,11 +275,8 @@ int main(int argc, char **argv)
   /* Initializations */
 	FILE *fin = NULL;
   int server_mode = 0;
-  int client_mode = 0;
-  char* server_addr = NULL;
   int wait_duration = 0;
   char* output_file = DEFAULT_FILE;
-  int interval = DEFAULT_INTERVAL;
   int exit_code = 0;
   pthread_t threads[NUM_THREADS];
   int rc;
@@ -309,7 +304,7 @@ int main(int argc, char **argv)
         break;
       case 'i':
         DPRINT("interval: %s\n", optarg); 
-        interval = atoi(optarg);
+        (void)atoi(optarg);
         break;
       case 'f':
         output_file = optarg;
@@ -321,7 +316,6 @@ int main(int argc, char **argv)
         break;
       case 'c':
         DPRINT("option: %c\n", opt); 
-        client_mode = 1;
         break;   
       case 'l':
         DPRINT("packet_size: %s\n", optarg); 
