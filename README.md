@@ -2,7 +2,7 @@
 
 A custom reliable transport protocol (microTCP) built on top of UDP sockets in C, featuring TCP-like connection management and an iperf-inspired network performance measurement tool.
 
-Developed as part of the **CS-435 Computer Networks** course at the University of Crete.
+Developed as part of the [**CS-435 Computer Networks**](https://www.csd.uoc.gr/~hy435/) course at the University of Crete.
 
 ## Features
 
